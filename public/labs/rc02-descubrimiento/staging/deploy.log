@@ -1,0 +1,9 @@
+[2024-03-02 01:12:44] === Inicio de migracion srv-old-portal01 -> srv-new-portal01 ===
+[2024-03-02 01:13:02] rsync /var/www/portal -> /var/www/portal-new ............ OK (412 archivos)
+[2024-03-02 01:13:40] Verificando permisos de /var/www/portal-new ............. OK
+[2024-03-02 01:15:37] Copias de seguridad de los archivos PHP de configuracion dejadas en /respaldo/
+[2024-03-02 01:15:38]   (copia manual: mismo nombre + extension de respaldo del editor)
+[2024-03-02 01:16:10] Editado config.php en produccion (nuevas credenciales BD)
+[2024-03-02 01:17:22] Listado de directorios deshabilitado en /respaldo/ ...... OK
+[2024-03-02 01:18:55] TODO: borrar /respaldo/ y /staging/ antes del lunes  <-- PENDIENTE
+[2024-03-02 01:19:03] === Fin de migracion ===

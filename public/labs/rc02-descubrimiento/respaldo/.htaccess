@@ -1,0 +1,8 @@
+# RC-02 · /respaldo/ no lista su contenido (403), pero las copias de respaldo
+# de config.php quedan accesibles. Todas se sirven con el mismo script, que
+# entrega el "código fuente" en texto plano con la flag del alumno.
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /labs/rc02-descubrimiento/respaldo/
+RewriteRule ^config\.php(\.bak|\.old|\.orig|\.save|\.backup|\.copy|\.swp|~)$ config.php [L]

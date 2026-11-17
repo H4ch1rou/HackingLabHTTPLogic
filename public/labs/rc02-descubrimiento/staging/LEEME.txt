@@ -1,0 +1,14 @@
+PORTAL DE PROVEEDORES - Notas de despliegue (uso interno)
+=========================================================
+
+Estructura de la aplicacion:
+
+  index.php       -> portada
+  login.php       -> autenticacion de proveedores
+  config.php      -> parametros de conexion (BD, SMTP, claves)
+  db.php          -> capa de acceso a datos
+  funciones.php   -> utilidades varias
+
+Antes de editar archivos en produccion SIEMPRE dejar copia en /respaldo/.
+
+-- Equipo de Operaciones TI

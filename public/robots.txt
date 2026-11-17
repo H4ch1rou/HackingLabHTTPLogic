@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /profesor.php
+# Portal de proveedores (Andes Logística) — no indexar zonas internas
+Disallow: /labs/rc02-descubrimiento/staging/
+Disallow: /labs/rc02-descubrimiento/respaldo/

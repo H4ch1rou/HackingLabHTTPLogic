@@ -1,0 +1,7 @@
+# Archivos que se ejecutan dentro del contenedor Linux: siempre LF.
+*.sh        text eol=lf
+*.php       text eol=lf
+*.conf      text eol=lf
+*.ini       text eol=lf
+.htaccess   text eol=lf
+Dockerfile  text eol=lf

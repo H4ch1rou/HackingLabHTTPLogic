@@ -1,0 +1,5 @@
+# RC-02 · Listado de directorio habilitado por error (intencional).
+Options +Indexes
+IndexOptions FancyIndexing NameWidth=*
+AddType text/plain .log .txt
+AddCharset utf-8 .log .txt

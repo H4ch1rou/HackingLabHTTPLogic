@@ -1,0 +1,25 @@
+# Uso:  docker compose up --build      →  http://localhost:8080
+#
+# Variables opcionales (en un archivo .env junto a este, o en la línea de comandos):
+#   LAB_PORT          puerto del host (por defecto 8080; usa otro si Burp ocupa el 8080)
+#   LAB_BIND          interfaz del host (por defecto 127.0.0.1 = solo este equipo)
+#   LAB_SECRET        secreto para derivar las flags (¡cámbialo en cada curso!)
+#   TEACHER_PASSWORD  contraseña del panel del profesor
+services:
+  lab:
+    build: .
+    image: http-lab:latest
+    container_name: http-lab
+    ports:
+      # ⚠️ Por defecto solo escucha en localhost. Usa LAB_BIND=0.0.0.0 únicamente
+      #    dentro de una red de laboratorio aislada. NUNCA lo expongas a Internet.
+      - "${LAB_BIND:-127.0.0.1}:${LAB_PORT:-8080}:80"
+    environment:
+      LAB_SECRET: ${LAB_SECRET:-dev-secret-cambiame}
+      TEACHER_PASSWORD: ${TEACHER_PASSWORD:-profesor}
+    volumes:
+      - labdata:/var/www/app/data
+    restart: unless-stopped
+
+volumes:
+  labdata:

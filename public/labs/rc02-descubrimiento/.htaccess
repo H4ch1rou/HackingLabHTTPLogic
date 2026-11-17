@@ -1,0 +1,6 @@
+# RC-02 · Cabeceras que revelan información del servidor (intencional).
+<IfModule mod_headers.c>
+    Header always set X-Powered-By "PHP/5.6.40"
+    Header always set X-Backend-Server "srv-old-portal01 (Apache/2.2.15 CentOS)"
+    Header always set X-Deploy "migracion-2024-03 ; staging habilitado"
+</IfModule>
